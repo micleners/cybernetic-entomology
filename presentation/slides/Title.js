@@ -24,8 +24,8 @@ import {
 } from "spectacle";
 
 const images = {
-  sai: require("../../assets/sai.png").default,
-  dsmjs: require("../../assets/dsmjs.png").default,
+  bug: require("../../assets/bug.svg").default,
+  sweep_bug: require("../../assets/sweep_bug.svg").default,
   twitter: require("../../assets/twitter.png").default
 };
 
@@ -65,7 +65,16 @@ export const Title = () => (
               src={images.twitter}
               style={{ marginRight: 15 }}
               width="50px"
-            />{" "}
+            />
+            <img
+              src={images.bug}
+              style={{ marginRight: 15 }}
+              width="50px"
+            />            <img
+              src={images.sweep_bug}
+              style={{ marginRight: 15 }}
+              width="50px"
+            />
             micLeners
           </div>
         </Heading>

@@ -25,7 +25,6 @@ import {
 
 const images = {
   sai: require("../../assets/sai.png").default,
-  dsmjs: require("../../assets/dsmjs.png").default,
   twitter: require("../../assets/twitter.png").default
 };
 
@@ -76,7 +75,6 @@ export const Closing = () => (
           </div>
         </Heading>
       </div>
-      <Image src={images.dsmjs} style={{ margin: "0 45px" }} width="100px" />
       <div
         style={{
           display: "flex",
