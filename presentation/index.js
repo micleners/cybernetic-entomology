@@ -9,7 +9,7 @@ import {
   FlexRowCenter,
   ListItemIndent
 } from './helpers';
-import { Title, Closing, HowToSquashBugs, Testing } from './slides';
+import { Title, Closing, HowToSquashBugs, Testing, Slide } from './slides';
 import './styles.css';
 import { Deck } from 'spectacle';
 
