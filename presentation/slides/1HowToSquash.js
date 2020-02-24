@@ -30,5 +30,7 @@ const images = {
 };
 
 export const HowToSquashBugs = () => (
-
+  <Slide>
+    <H1Norm> Apples</H1Norm>
+  </Slide>
 );
