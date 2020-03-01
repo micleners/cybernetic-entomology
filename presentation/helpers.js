@@ -41,8 +41,8 @@ export const H1Col1 = styled(H1Norm)`
   color: ${themeColors.yellow};
 `;
 
-export const H2 = ({ children }) => (
-  <Heading size={4} lineHeight={1.1} textColor="lightText">
+export const H2 = ({ children, style }) => (
+  <Heading size={4} lineHeight={1.1} textColor="lightText" style={style}>
     {children}
   </Heading>
 );

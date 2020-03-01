@@ -38,8 +38,11 @@ const images = {
   doorGuardIntegration: require('../assets/door-gaurd-sync.gif').default,
   window: require('../assets/windows.gif').default,
   pyramid: require('../assets/test_pyramid.png').default,
+  pyramid2: require('../assets/test_pyramid2.png').default,
   boxes: require('../assets/blackbox_whitebox.svg').default,
-  testingLevels: require('../assets/testing_levels.svg').default
+  testingLevels: require('../assets/testing_levels.svg').default,
+  nike: require('../assets/nike.png').default,
+  repeat: require('../assets/repeat.svg').default
 };
 
 const theme = createTheme(themeColors, {
@@ -220,13 +223,214 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['zoom']} bgColor="dark">
-          <H2>Why are tests important?</H2>
-          <Image src={images.doorGuardIntegration} height="600px" />
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Thoughts on Integration Tests
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <ListItem>
+              Can be done <AquaText>within unit testing</AquaText> framework
+            </ListItem>
+            <ListItem>
+              <AquaText>API frameworks:</AquaText> Cucumber, Rest Assured,
+              PostMan
+            </ListItem>
+            <ListItem>
+              <AquaText>UI frameworks:</AquaText> Selenium, Cypress, Capybara
+            </ListItem>
+            <ListItem>
+              Blog:{' '}
+              <a href="https://www.toptal.com/java/unit-integration-junit-tests">
+                <AquaText>Unit vs Integration Tests in Java</AquaText>
+              </a>
+            </ListItem>
+            <ListItem>
+              Blog:{' '}
+              <a href="https://engineering.helpscout.com/testing-code-that-talks-to-the-database-7d15a5391fb9">
+                <AquaText>Testing Code that Talks to the DB</AquaText>
+              </a>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <H1Col1>Automated E2E & API Testing</H1Col1>
+          <br />
+          <H2>The gift that keeps on giving 🎁</H2>
+          <br />
+          <List style={{ marginLeft: 150 }} textColor="text">
+            <ListItem>Catch more defects in development</ListItem>
+            <ListItem>Tightens communication within team</ListItem>
+            <ListItem>Serves as regression test suite</ListItem>
+            <ListItem>
+              See{' '}
+              <a href="https://github.com/micleners/cypress-retro/">
+                <AquaText>Talk on Cypress for more info</AquaText>
+              </a>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <H2 style={{ paddingBottom: 40 }}>
+            But don't forget your test pyramid!
+          </H2>
+          <Image src={images.pyramid2} height="500px" />
         </Slide>
 
         <Slide transition={['zoom']} bgColor="dark">
           <Image src={images.bug} width="300px" />
-          <H2>What kind of tests do automate?</H2>
+          <H2>What tests happen outside automation?</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Tests outside of dev flow
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <ListItem>Regression testing vs Smoke testing</ListItem>
+            <ListItem>Load testing and performance testing</ListItem>
+            <ListItem>Security and penetration testing</ListItem>
+            <ListItem>Usability and exploratory testing</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>How does a team design a test plan that's best for them?</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Flex alignItems="center" justifyContent="space-around" mx="300px">
+            <img src={images.sweep_bug} width="300px" />
+          </Flex>
+          <H2>It gets dictated from the top down</H2>
+          <H2>¯\_(ツ)_/¯</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Flex alignItems="center" justifyContent="space-around" mx="300px">
+            <img src={images.nike} width="300px" />
+            <img src={images.sweep_bug} width="300px" />
+          </Flex>
+          <H2>Have the conversations.</H2>
+          <H2>Document whats important to test.</H2>
+          <H2>Revise and revisit the plan often.</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Considerations on test plans
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <ListItem>
+              What are <AquaText>client needs</AquaText>?
+            </ListItem>
+            <ListItem>
+              What are <AquaText>application needs</AquaText>?
+            </ListItem>
+            <ListItem>
+              What are <AquaText>compliance needs</AquaText>?
+            </ListItem>
+            <ListItem>
+              What is <AquaText>developer/QA preference</AquaText> and
+              <AquaText> experience</AquaText>?
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Flex alignItems="center" justifyContent="space-around" mx="300px">
+            <img src={images.repeat} width="300px" />
+            <img src={images.sweep_bug} width="300px" />
+          </Flex>
+          <H2>Have serious discussions on testing.</H2>
+          <H2>Have a common consensus.</H2>
+          <H2>Assess blind spots often.</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              More considerations on test plans
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <ListItem>
+              <AquaText>Level of automation</AquaText>
+            </ListItem>
+            <ListItem>
+              Purpose of <AquaText>manual testing</AquaText>
+            </ListItem>
+            <ListItem>
+              <AquaText>Testing flow</AquaText> in sprint vs outside of sprint
+            </ListItem>
+            <ListItem>
+              <AquaText>Data management</AquaText> for e2e, manual, and load
+              testing
+            </ListItem>
+            <ListItem>
+              <AquaText>Test case</AquaText> organization and record keeping
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              More considerations on test plans
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <ListItem>
+              <AquaText>Level of automation</AquaText>
+            </ListItem>
+            <ListItem>
+              Purpose of <AquaText>manual testing</AquaText>
+            </ListItem>
+            <ListItem>
+              <AquaText>Testing flow</AquaText> in sprint vs outside of sprint
+            </ListItem>
+            <ListItem>
+              <AquaText>Data management</AquaText> for e2e, manual, and load
+              testing
+            </ListItem>
+            <ListItem>
+              <AquaText>Test case</AquaText> organization and record keeping
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>How do we designate test cases that are more important?</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Use a Severity Level Ranking
+            </Flex>
+          </Heading>
+          <Heading size={5} textColor="text">
+            Label both test cases and stories with severity:
+          </Heading>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <Heading size={5} textColor="text">
+              Label both test cases and stories with severity:
+            </Heading>
+          </List>
         </Slide>
 
         <Testing />
