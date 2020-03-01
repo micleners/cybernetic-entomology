@@ -28,6 +28,9 @@ export const themeColors = {
   purple: "#663399"
 };
 
+export const AquaText = ({children}) => (
+  <span style={{ color: themeColors.aqua }}>{children}</span>
+)
 export const H1Norm = ({ children }) => (
   <Heading size={2} lineHeight={1.1} textColor="text">
     {children}

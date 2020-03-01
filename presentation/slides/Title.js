@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   themeColors,
   H1Norm,
@@ -6,8 +6,8 @@ import {
   H2,
   FlexRowCenter,
   ListItemIndent
-} from "../helpers";
-import "../styles.css";
+} from '../helpers';
+import '../styles.css';
 import {
   BlockQuote,
   Cite,
@@ -21,70 +21,49 @@ import {
   Slide,
   Text,
   Link
-} from "spectacle";
+} from 'spectacle';
+import { Flex } from 'rebass';
 
 const images = {
-  bug: require("../../assets/bug.svg").default,
-  sweep_bug: require("../../assets/sweep_bug.svg").default,
-  twitter: require("../../assets/twitter.png").default
+  bug: require('../../assets/bug.svg').default,
+  sweep_bug: require('../../assets/sweep_bug.svg').default,
+  github: require('../../assets/Github.svg').default,
+  twitter: require('../../assets/twitter.png').default
 };
 
 export const Title = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
-    <H1Norm>
-      <span style={{ color: themeColors.yellow }}>Cypress</span> for E2E
-      Testing:
-    </H1Norm>
-    <Heading size={3} lineHeight={1.1} textColor="text">
-      A Retrospective
-    </Heading>
-    <br />
-    <br />
-    <br />
-    <FlexRowCenter>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "flex-start"
-        }}
-      >
-        <Heading size={4} caps lineHeight={1} textColor="lightText">
-          Michael Leners
-        </Heading>
-        <Heading size={6} lineHeight={1} textColor="lightText">
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "flex-end"
-            }}
+  <Slide transition={['zoom']} bgColor="dark">
+    <Flex alignItems="center" justifyContent="center">
+      <img src={images.bug} style={{ margin: 15 }} width="100px" />
+      <Flex flexDirection="column" alignItems="center" justifyContent="center">
+        <Heading size={4}>
+          <span
+            style={{ color: themeColors.yellow, textTransform: 'uppercase' }}
           >
-            <img
-              src={images.twitter}
-              style={{ marginRight: 15 }}
-              width="50px"
-            />
-            <img
-              src={images.bug}
-              style={{ marginRight: 15 }}
-              width="50px"
-            />            <img
-              src={images.sweep_bug}
-              style={{ marginRight: 15 }}
-              width="50px"
-            />
-            micLeners
-          </div>
+            Cybernetic Entomology
+          </span>
         </Heading>
-      </div>
-    </FlexRowCenter>
-    <br />
-    <br />
-    <br />
-    <Heading size={5} caps lineHeight={1} textColor="text">
-      February 12, 2020
+        <Heading size={4} lineHeight={1.1} textColor="lightText">
+          There's always one more bug
+        </Heading>
+      </Flex>
+      <img src={images.sweep_bug} style={{ margin: 15 }} width="100px" />
+    </Flex>
+
+    <Flex py={5} flexDirection="column" alignItems="center" justifyContent="center">
+      <Heading size={4} caps lineHeight={1} textColor="text">
+        Michael Leners
+      </Heading>
+      <Flex alignItems="center" justifyContent="center">
+        <img src={images.twitter} style={{ margin: "0 15px" }} width="70px" height="auto" />
+        <Heading size={6} lineHeight={1} textColor="text">
+          micLeners
+        </Heading>
+        <img src={images.github} style={{ margin: "0 15px" }} width="70px" />
+      </Flex>
+    </Flex>
+    <Heading size={5} caps lineHeight={1} textColor="lightText">
+      March 2, 2020
     </Heading>
   </Slide>
 );
