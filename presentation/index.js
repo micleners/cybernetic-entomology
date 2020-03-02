@@ -52,7 +52,8 @@ const images = {
   rootCause: require('../assets/root_cause.jpeg').default,
   deathByBug: require('../assets/bugs_bring_you_down.png').default,
   testInProd: require('../assets/test_in_production.jpg').default,
-  foundABug: require('../assets/found-a-bug.png').default
+  foundABug: require('../assets/found-a-bug.png').default,
+  qr: require('../assets/qr.png').default
 };
 
 const theme = createTheme(themeColors, {
@@ -81,6 +82,7 @@ export default class Presentation extends React.Component {
         <Title />
 
         <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={6} textColor="lightText">https://cybernetic-entomology.micleners.com/</Heading>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScrc5-05gtAOZjP2Oxg3r4jQAViL7yaS_G3m6xnDB4BnVvTlw/viewform">
             <Image src={images.qr} height="600px" />
           </a>
