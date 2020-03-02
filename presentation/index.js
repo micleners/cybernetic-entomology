@@ -42,7 +42,16 @@ const images = {
   boxes: require('../assets/blackbox_whitebox.svg').default,
   testingLevels: require('../assets/testing_levels.svg').default,
   nike: require('../assets/nike.png').default,
-  repeat: require('../assets/repeat.svg').default
+  repeat: require('../assets/repeat.svg').default,
+  bugSeverity: require('../assets/minor_critical_bug.png').default,
+  testingTiming: require('../assets/pipeline-cannot-fail.jpg').default,
+  userTesting: require('../assets/no_user_would_ever_do_that.png').default,
+  expandTesting: require('../assets/testing_progression_nuke.jpg').default,
+  scope: require('../assets/prioritizing_scope_deadline.jpg').default,
+  allBugsFound: require('../assets/all_bugs_found.png').default,
+  rootCause: require('../assets/root_cause.jpeg').default,
+  deathByBug: require('../assets/bugs_bring_you_down.png').default,
+  testInProd: require('../assets/test_in_production.jpg').default
 };
 
 const theme = createTheme(themeColors, {
@@ -78,6 +87,18 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['zoom']} bgColor="dark">
+          <a href="https://www.monkeyuser.com/">
+            <Image src={images.rootCause} height="600px" />
+          </a>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <a href="https://www.monkeyuser.com/2018/zenos-progress/">
+            <Image src={images.deathByBug} height="600px" />
+          </a>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
           <H1Norm>
             <Flex justifyContent="center" alignItems="center">
               <img src={images.sweep_bug} width="200px" />
@@ -94,6 +115,10 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
+        <Slide transition={['zoom']} bgColor="dark">
+            <Image src={images.testInProd} height="600px" />
+        </Slide>
+
         <BugSlide text="What tests do we automate?" />
         <Slide transition={['zoom']} bgColor="dark">
           <H1Norm>
@@ -102,7 +127,7 @@ export default class Presentation extends React.Component {
               Tests we automate
             </Flex>
           </H1Norm>
-          <List style={{ marginLeft: 250 }} textColor="text">
+          <List style={{ marginLeft: 450 }} textColor="text">
             <ListItem>Unit tests</ListItem>
             <ListItem>Integration tests</ListItem>
             <ListItem>API tests</ListItem>
@@ -148,7 +173,7 @@ export default class Presentation extends React.Component {
               🤔 Important questions
             </Flex>
           </Heading>
-          <List style={{ marginLeft: 150 }} textColor="text">
+          <List style={{ marginLeft: 250 }} textColor="text">
             <ListItem>
               How small is a <AquaText>unit</AquaText>?
             </ListItem>
@@ -281,6 +306,10 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.expandTesting} height="600px" />
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
           <Image src={images.bug} width="300px" />
           <H2>What tests happen outside automation?</H2>
         </Slide>
@@ -292,8 +321,8 @@ export default class Presentation extends React.Component {
               Tests outside of dev flow
             </Flex>
           </Heading>
-          <List style={{ marginLeft: 50 }} textColor="text">
-            <ListItem>Regression testing vs Smoke testing</ListItem>
+          <List style={{ marginLeft: 250 }} textColor="text">
+            <ListItem>Regression testing vs. Smoke testing</ListItem>
             <ListItem>Load testing and performance testing</ListItem>
             <ListItem>Security and penetration testing</ListItem>
             <ListItem>Usability and exploratory testing</ListItem>
@@ -385,30 +414,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['zoom']} bgColor="dark">
-          <Heading size={4} textColor="lightText">
-            <Flex justifyContent="center" alignItems="center">
-              <img src={images.sweep_bug} width="200px" />
-              More considerations on test plans
-            </Flex>
-          </Heading>
-          <List style={{ marginLeft: 50 }} textColor="text">
-            <ListItem>
-              <AquaText>Level of automation</AquaText>
-            </ListItem>
-            <ListItem>
-              Purpose of <AquaText>manual testing</AquaText>
-            </ListItem>
-            <ListItem>
-              <AquaText>Testing flow</AquaText> in sprint vs outside of sprint
-            </ListItem>
-            <ListItem>
-              <AquaText>Data management</AquaText> for e2e, manual, and load
-              testing
-            </ListItem>
-            <ListItem>
-              <AquaText>Test case</AquaText> organization and record keeping
-            </ListItem>
-          </List>
+          <Image src={images.bugSeverity} height="600px" />
         </Slide>
 
         <Slide transition={['zoom']} bgColor="dark">
@@ -424,16 +430,218 @@ export default class Presentation extends React.Component {
             </Flex>
           </Heading>
           <Heading size={5} textColor="text">
-            Label both test cases and stories with severity:
+            Label test cases and stories on severity:
+          </Heading>
+          <Text
+            style={{ fontSize: 38 }}
+            padding="0 80px"
+            textColor="lightText"
+            textAlign="left"
+          >
+            <ol>
+              <li style={{ paddingBottom: 10 }}>
+                Renders application or system inoperable. Widespread issue.
+                Merits immediate attention.
+              </li>
+              <li style={{ paddingBottom: 10 }}>
+                Causes significant impact to business functions. No workaround
+                exists. Task makes it into workflow as soon as possible.
+              </li>
+              <li style={{ paddingBottom: 10 }}>
+                Impacts functionality, but work-around exists or impact is
+                accessible. Fixing issue can wait.
+              </li>
+              <li style={{ paddingBottom: 10 }}>
+                The problem has low impact to business function. It may never
+                get fixed.
+              </li>
+            </ol>
+          </Text>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.scope} height="800px" />
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Decide what is inside and outside of scope
+            </Flex>
           </Heading>
           <List style={{ marginLeft: 50 }} textColor="text">
-            <Heading size={5} textColor="text">
-              Label both test cases and stories with severity:
-            </Heading>
+            <ListItem>
+              <AquaText>In Scope Examples:</AquaText>
+            </ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              Code we write (modules, components, services)
+            </ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              Data management layers
+            </ListItem>
+
+            <ListItem>
+              <AquaText>In Scope Examples:</AquaText>
+            </ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              Mobile or Tablet testing
+            </ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              3rd party API testing
+            </ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              Browsers: Only Chrome, not IE
+            </ListItem>
           </List>
         </Slide>
 
-        <Testing />
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.testingTiming} height="600px" />
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>When do we run tests in our process?</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Flex justifyContent="center" alignItems="center">
+            <img src={images.sweep_bug} width="200px" />
+            <Flex flexDirection="column" alignItems="flex-start">
+              <Heading textColor="lightText" size={4}>
+                Often and everywhere
+              </Heading>
+              <Heading textColor="text" size={5}>
+                Examples:
+              </Heading>
+            </Flex>
+          </Flex>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <ListItem>locally & at build time:</ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>unit, integration, api/e2e</AquaText>
+            </ListItem>
+            <ListItem>on each deploy:</ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>automated API tests and E2E test suite</AquaText>
+            </ListItem>
+            <ListItem>on-going:</ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>
+                smoke testing, regression testing, user testing
+              </AquaText>
+            </ListItem>
+            <ListItem>prior to prod release:</ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>security, penetration, rigorous regression</AquaText>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>
+            How do we communicate testing within our team or across teams?
+          </H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Decide what is inside and outside of scope
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 50 }} textColor="text">
+            <ListItem>Variables:</ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              <AquaText>Is QA is embedded or on a separate team?</AquaText>
+            </ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              <AquaText>Who writes test cases?</AquaText>
+            </ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>Who writes automated tests?</AquaText>
+            </ListItem>
+            <ListItem>Our best practice:</ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              <AquaText>Whiteboard session starting story & testing</AquaText>
+            </ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              <AquaText>Reconcile test cases w/ manual vs. automated</AquaText>
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.userTesting} height="600px" />
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>What does user testing entail?</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.sweep_bug} width="300px" />
+          <H2>Getting a user in front of your application and trying it out</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              User testing:
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 200 }} textColor="text">
+            <ListItem>Picking the demographic:</ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>users, customers, random people</AquaText>
+            </ListItem>
+            <ListItem>Type of tests:</ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>guided testing or exploratory testing</AquaText>
+            </ListItem>
+            <ListItem>What devices/browsers will you use?</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>How do we handle non-functional requirements?</H2>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Your guess is as good as mine
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 250 }} textColor="text">
+            <ListItem>Load testing (frontend & APIs)</ListItem>
+            <ListItem>Performance testing</ListItem>
+            <ListItem style={{ marginLeft: 50 }}>
+              <AquaText>On different devices and browsers</AquaText>
+            </ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>Web App and API response time</AquaText>
+            </ListItem>
+            <ListItem>Scalability</ListItem>
+            <ListItem>Localization/Internationalization</ListItem>
+            <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
+              <AquaText>Timezones, Currency, Languages</AquaText>
+            </ListItem>
+            <ListItem>Stability and recoverability</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <Image src={images.allBugsFound} height="600px" />
+        </Slide>
+
         <Closing />
       </Deck>
     );
