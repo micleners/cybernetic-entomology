@@ -51,7 +51,8 @@ const images = {
   allBugsFound: require('../assets/all_bugs_found.png').default,
   rootCause: require('../assets/root_cause.jpeg').default,
   deathByBug: require('../assets/bugs_bring_you_down.png').default,
-  testInProd: require('../assets/test_in_production.jpg').default
+  testInProd: require('../assets/test_in_production.jpg').default,
+  foundABug: require('../assets/found-a-bug.png').default
 };
 
 const theme = createTheme(themeColors, {
@@ -78,6 +79,13 @@ export default class Presentation extends React.Component {
         bgColor="dark"
       >
         <Title />
+
+        <Slide transition={['zoom']} bgColor="dark">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScrc5-05gtAOZjP2Oxg3r4jQAViL7yaS_G3m6xnDB4BnVvTlw/viewform">
+            <Image src={images.qr} height="600px" />
+          </a>
+        </Slide>
+
         <AboutMe />
         <BugSlide text="Why are tests important?" />
 
@@ -377,6 +385,12 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['zoom']} bgColor="dark">
+          <a href="https://www.monkeyuser.com/2018/zenos-progress/">
+            <Image src={images.foundABug} height="600px" />
+          </a>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="dark">
           <Flex alignItems="center" justifyContent="space-around" mx="300px">
             <img src={images.repeat} width="300px" />
             <img src={images.sweep_bug} width="300px" />
@@ -642,6 +656,12 @@ export default class Presentation extends React.Component {
           <Image src={images.allBugsFound} height="600px" />
         </Slide>
 
+        <Slide transition={['zoom']} bgColor="dark">
+          <Heading size={4} textColor="lightText">https://cybernetic-entomology.micleners.com/</Heading>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScrc5-05gtAOZjP2Oxg3r4jQAViL7yaS_G3m6xnDB4BnVvTlw/viewform">
+            <Image src={images.qr} height="600px" />
+          </a>
+        </Slide>
         <Closing />
       </Deck>
     );
