@@ -498,7 +498,7 @@ export default class Presentation extends React.Component {
             </ListItem>
 
             <ListItem>
-              <AquaText>In Scope Examples:</AquaText>
+              <AquaText>Out of Scope Examples:</AquaText>
             </ListItem>
             <ListItem style={{ marginLeft: 50 }}>
               Mobile or Tablet testing
