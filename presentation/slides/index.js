@@ -1,5 +1,4 @@
 export * from "./Closing"
 export * from "./Title"
 export * from "./TraditionalTesting"
-export * from "./1Testing"
 export * from "./AboutMe"
