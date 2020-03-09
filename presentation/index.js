@@ -226,7 +226,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.bug} width="300px" />
-          <H2>How do we designate test cases that are more important?</H2>
+          <H2>How do you designate test cases that are more important?</H2>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="dark">
@@ -459,7 +459,14 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.bug} width="300px" />
-          <H2>How much should tests overlap?</H2>
+          <H2>How much do your tests overlap?</H2>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>
+            How much <em>should</em> tests overlap?
+          </H2>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="dark">
@@ -534,43 +541,17 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="dark">
-          <H2 style={{ paddingBottom: 40 }}>
-            But don't forget your test pyramid!
-          </H2>
+          <H2 style={{ paddingBottom: 40 }}>Keep in mind the Test Pyramid</H2>
           <Image src={images.pyramid2} height="500px" />
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="dark">
-          <Image src={images.expandTesting} height="600px" />
-        </Slide>
-
-        <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.bug} width="300px" />
-          <H2>What tests happen outside automation?</H2>
-        </Slide>
-
-        <Slide transition={["zoom"]} bgColor="dark">
-          <Heading size={4} textColor="lightText">
-            <Flex justifyContent="center" alignItems="center">
-              <img src={images.sweep_bug} width="200px" />
-              Tests outside of dev flow
-            </Flex>
-          </Heading>
-          <List style={{ marginLeft: 250 }} textColor="text">
-            <ListItem>Regression testing vs. Smoke testing</ListItem>
-            <ListItem>Load testing and performance testing</ListItem>
-            <ListItem>Security and penetration testing</ListItem>
-            <ListItem>Usability and exploratory testing</ListItem>
-          </List>
+          <H2>When do you run tests in your process?</H2>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.testingTiming} height="600px" />
-        </Slide>
-
-        <Slide transition={["zoom"]} bgColor="dark">
-          <Image src={images.bug} width="300px" />
-          <H2>When do we run tests in our process?</H2>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="dark">
@@ -604,6 +585,26 @@ export default class Presentation extends React.Component {
             <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
               <AquaText>security, penetration, rigorous regression</AquaText>
             </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="dark">
+          <Image src={images.bug} width="300px" />
+          <H2>What tests happen outside automation?</H2>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="dark">
+          <Heading size={4} textColor="lightText">
+            <Flex justifyContent="center" alignItems="center">
+              <img src={images.sweep_bug} width="200px" />
+              Tests outside of dev flow
+            </Flex>
+          </Heading>
+          <List style={{ marginLeft: 250 }} textColor="text">
+            <ListItem>Regression testing vs. Smoke testing</ListItem>
+            <ListItem>Load testing and performance testing</ListItem>
+            <ListItem>Security and penetration testing</ListItem>
+            <ListItem>Usability and exploratory testing</ListItem>
           </List>
         </Slide>
 
