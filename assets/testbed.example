@@ -1,0 +1,43 @@
+describe('Shallow Mount', () => {
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [DiscardContractAddComponent, DiscardContractAddModal],
+      schemas: [NO_ERRORS_SCHEMA],
+      imports: [MatDialogModule, RouterTestingModule],
+      providers: [AuthTokenService, MatDialog]
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    authTokenService = TestBed.get(AuthTokenService);
+    authTokenService.isAuthorized =
+      jest.fn().mockReturnValue(true);
+    matDialog = TestBed.get(MatDialog);
+    matDialog.open = jest.fn();
+    fixture = TestBed
+      .createComponent(DiscardContractAddComponent);
+    component = fixture.componentInstance;
+  });
+
+  it('can do fixture/template tests', () => {
+    const addButton = fixture
+      .debugElement
+      .nativeElement
+      .querySelector(
+        '.add-discard-contract'
+      );
+    addButton.click();
+    expect(matDialog.open).toHaveBeenCalled();
+    
+    const dialogue = fixture
+      .debugElement
+      .nativeElement
+      .querySelector(
+        'mat-dialog-container'
+      );
+    expect(dialogue).toBeTruthy();
+  });
+});
+
+
+
