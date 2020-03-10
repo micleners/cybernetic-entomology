@@ -90,6 +90,35 @@ export const InsideOrOutsideOfScope = () => (
       </Flex>
     </Heading>
     <List style={{ marginLeft: 50 }} textColor="text">
+      <ListItem>
+        <AquaText>In Scope Examples:</AquaText>
+      </ListItem>
+      <ListItem style={{ marginLeft: 50 }}>
+        Code we write (modules, components, services)
+      </ListItem>
+      <ListItem style={{ marginLeft: 50 }}>Data management layers</ListItem>
+
+      <ListItem>
+        <AquaText>Out of Scope Examples:</AquaText>
+      </ListItem>
+      <ListItem style={{ marginLeft: 50 }}>Mobile or Tablet testing</ListItem>
+      <ListItem style={{ marginLeft: 50 }}>3rd party API testing</ListItem>
+      <ListItem style={{ marginLeft: 50 }}>
+        Browsers: Only Chrome, not IE
+      </ListItem>
+    </List>
+  </Slide>
+);
+
+export const QACommunication = () => (
+  <Slide transition={["zoom"]} bgColor="dark">
+    <Heading size={4} textColor="lightText">
+      <Flex justifyContent="center" alignItems="center">
+        <img src={bugSweep} width="200px" />
+        Decide what is inside and outside of scope
+      </Flex>
+    </Heading>
+    <List style={{ marginLeft: 50 }} textColor="text">
       <ListItem>Variables:</ListItem>
       <ListItem style={{ marginLeft: 50 }}>
         <AquaText>Is QA is embedded or on a separate team?</AquaText>
@@ -190,11 +219,13 @@ export const TestPlanDictated = () => (
     <Flex alignItems="center" justifyContent="space-around" mx="300px">
       <img src={bugSweep} width="300px" />
     </Flex>
-    <H2>Easy! The test plan gets dictated from the top down</H2>
+    <H2>Easy!</H2>
+    <H2>The test plan gets dictated from the top down</H2>
     <H2>¯\_(ツ)_/¯</H2>
   </Slide>
 );
 
+// TODO: Update outline
 export const TestOutline = () => (
   <Slide transition={["zoom"]} bgColor="dark">
     <H1Norm>

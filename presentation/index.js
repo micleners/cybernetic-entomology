@@ -35,7 +35,8 @@ import {
   ThoughtsOnIntegrationTests,
   AboutMe,
   Bug,
-  AutomatedEndToEndTests
+  AutomatedEndToEndTests,
+  QACommunication
 } from "./slides";
 import "./styles.css";
 import {
@@ -122,28 +123,17 @@ export default class Presentation extends React.Component {
           </a>
         </Slide>
 
-        <Bug text="How does a team decide on the most important tests to maximize bug extermination?" />
+        <Bug text="How does a team decide what tests are most important to maximize bug extermination?" />
+
         <TestPlanDictated />
-
-        <Slide transition={["zoom"]} bgColor="dark">
-          <Image src={images.testInProd} height="600px" />
-        </Slide>
-
         <TestPlanJustDoIt />
         <ConsiderationsOnTestPlans />
-
-        <Slide transition={["zoom"]} bgColor="dark">
-          <a href="https://www.monkeyuser.com/">
-            <Image src={images.rootCause} height="600px" />
-          </a>
-        </Slide>
-
         <MoreOnTestPlans />
         <TestPlanJustDoItReprise />
 
         <Slide transition={["zoom"]} bgColor="dark">
-          <a href="https://www.monkeyuser.com/2018/zenos-progress/">
-            <Image src={images.foundABug} height="600px" />
+          <a href="https://www.monkeyuser.com/">
+            <Image src={images.rootCause} height="600px" />
           </a>
         </Slide>
 
@@ -157,8 +147,16 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.scope} height="700px" />
         </Slide>
-
         <InsideOrOutsideOfScope />
+
+        <Slide transition={["zoom"]} bgColor="dark">
+          <a href="https://www.monkeyuser.com/2018/zenos-progress/">
+            <Image src={images.foundABug} height="600px" />
+          </a>
+        </Slide>
+        <Bug text="How do we communicate testing within our team or across teams?" />
+        <QACommunication />
+
         <BugSlide text="What tests do we automate?" />
         <WhatTestsDoWeAutomate />
         <FigmaSlide />
@@ -325,6 +323,10 @@ export default class Presentation extends React.Component {
         <ThoughtsOnIntegrationTests />
 
         <Slide transition={["zoom"]} bgColor="dark">
+          <Image src={images.testInProd} height="600px" />
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="dark">
           <H2>Example Testing Opening a Modal</H2>
           <Image src={images.modal} height="600px" />
         </Slide>
@@ -357,6 +359,7 @@ export default class Presentation extends React.Component {
             { loc: [14, 18], title: "Testing Dialog Modal" }
           ]}
         />
+
         <CodeSlide
           className="code"
           transition={[]}
@@ -416,6 +419,7 @@ export default class Presentation extends React.Component {
             { loc: [31, 40], title: "Testing Dialog Modal" }
           ]}
         />
+
         <CodeSlide
           className="code"
           transition={[]}
@@ -467,8 +471,7 @@ export default class Presentation extends React.Component {
 
         <Bug text="What tests happen outside automation?" />
         <TestsOutsideOfAutomation />
-        <Bug text="How do we communicate testing within our team or across teams?" />
-        <InsideOrOutsideOfScope />
+
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.userTesting} height="600px" />
         </Slide>
@@ -476,8 +479,10 @@ export default class Presentation extends React.Component {
         <Bug text="What does user testing entail?" />
         <GetUsersInFrontOfApplication />
         <ConsiderationsOnUserTesting />
+
         <Bug text="How do we handle non-functional requirements?" />
         <NonFunctionalRequirements />
+
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.allBugsFound} height="600px" />
         </Slide>
