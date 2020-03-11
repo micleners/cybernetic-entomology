@@ -94,7 +94,7 @@ export const InsideOrOutsideOfScope = () => (
         <AquaText>In Scope Examples:</AquaText>
       </ListItem>
       <ListItem style={{ marginLeft: 50 }}>
-        Code we write (modules, components, services)
+        Code you write (modules, components, services)
       </ListItem>
       <ListItem style={{ marginLeft: 50 }}>Data management layers</ListItem>
 
@@ -115,7 +115,7 @@ export const QACommunication = () => (
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
-        Decide what is inside and outside of scope
+        Communication between Devs, QA, and beyond
       </Flex>
     </Heading>
     <List style={{ marginLeft: 50 }} textColor="text">
@@ -129,6 +129,8 @@ export const QACommunication = () => (
       <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
         <AquaText>Who writes automated tests?</AquaText>
       </ListItem>
+      <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}></ListItem>
+      <ListItem>Clear expectations up front 👍</ListItem>
       <ListItem>Our best practice:</ListItem>
       <ListItem style={{ marginLeft: 50 }}>
         <AquaText>Whiteboard session starting story & testing</AquaText>
@@ -235,12 +237,11 @@ export const TestOutline = () => (
       </Flex>
     </H1Norm>
     <List style={{ marginLeft: 250 }} textColor="text">
-      <ListItem>Tests we automate</ListItem>
-      <ListItem>Tests done manually</ListItem>
-      <ListItem>Non-functional requirements</ListItem>
-      <ListItem>Severity ranking and testing scope</ListItem>
-      <ListItem>Timing of tests and environments</ListItem>
-      <ListItem>Team/Cross Team Dynamics</ListItem>
+      <ListItem>Test Plan and Coordination</ListItem>
+      <ListItem>Automated Tests</ListItem>
+      <ListItem>Code Examples</ListItem>
+      <ListItem>User Testing</ListItem>
+      <ListItem>Non-Functional Requirements</ListItem>
     </List>
   </Slide>
 );
@@ -367,7 +368,7 @@ export const WhatTestsDoWeAutomate = () => (
     <H1Norm>
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
-        Tests we automate
+        Automated Tests
       </Flex>
     </H1Norm>
     <List style={{ marginLeft: 450 }} textColor="text">

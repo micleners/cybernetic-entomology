@@ -154,10 +154,10 @@ export default class Presentation extends React.Component {
             <Image src={images.foundABug} height="600px" />
           </a>
         </Slide>
-        <Bug text="How do we communicate testing within our team or across teams?" />
+        <Bug text="How do you communicate around testing?" />
         <QACommunication />
 
-        <BugSlide text="What tests do we automate?" />
+        <BugSlide text="What tests do you automate?" />
         <WhatTestsDoWeAutomate />
         <FigmaSlide />
 
@@ -218,16 +218,16 @@ export default class Presentation extends React.Component {
               How small is a <AquaText>unit</AquaText>?
             </ListItem>
             <ListItem>
-              How do we <AquaText>mock dependencies</AquaText>?
+              How do you <AquaText>mock dependencies</AquaText>?
             </ListItem>
             <ListItem>
               What is <AquaText>depth of testing</AquaText>?
             </ListItem>
             <ListItem>
-              How do we analyse <AquaText>code coverage</AquaText>?
+              How do you analyse <AquaText>code coverage</AquaText>?
             </ListItem>
             <ListItem>
-              How do we <AquaText>mock the database</AquaText>?
+              How do you <AquaText>mock the database</AquaText>?
             </ListItem>
           </List>
         </Slide>
@@ -472,6 +472,9 @@ export default class Presentation extends React.Component {
         <Bug text="What tests happen outside automation?" />
         <TestsOutsideOfAutomation />
 
+        <Bug text="How do you handle non-functional requirements?" />
+        <NonFunctionalRequirements />
+
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.userTesting} height="600px" />
         </Slide>
@@ -479,9 +482,6 @@ export default class Presentation extends React.Component {
         <Bug text="What does user testing entail?" />
         <GetUsersInFrontOfApplication />
         <ConsiderationsOnUserTesting />
-
-        <Bug text="How do we handle non-functional requirements?" />
-        <NonFunctionalRequirements />
 
         <Slide transition={["zoom"]} bgColor="dark">
           <Image src={images.allBugsFound} height="600px" />
