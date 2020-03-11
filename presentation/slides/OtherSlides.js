@@ -129,7 +129,6 @@ export const QACommunication = () => (
       <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}>
         <AquaText>Who writes automated tests?</AquaText>
       </ListItem>
-      <ListItem style={{ marginLeft: 50, paddingBottom: 10 }}></ListItem>
       <ListItem>Clear expectations up front 👍</ListItem>
       <ListItem>Our best practice:</ListItem>
       <ListItem style={{ marginLeft: 50 }}>
