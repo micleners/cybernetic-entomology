@@ -54,16 +54,12 @@ export const Closing = () => (
     </Flex>
     <br />
     <br />
-    <Text size={5} lineHeight={1} textColor="text">
+    <Text size={5} lineHeight={1} style="padding-bottom: 10px" textColor="text">
       <strong>This Presentation:</strong> cybernetic-entomology.micleners.com
     </Text>
-    <br />
-
-    <Text size={5} lineHeight={1} textColor="text">
+    <Text size={5} lineHeight={1} style="padding-bottom: 10px" textColor="text">
       <strong>Repo:</strong> github.com/micleners/cybernetic-entomology
     </Text>
-    <br />
-
     <Text size={5} lineHeight={1} textColor="text">
       <strong>Cypress Repo:</strong> github.com/micleners/cypress-retro
     </Text>
