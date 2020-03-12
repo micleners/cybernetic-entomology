@@ -16,16 +16,28 @@ import {
   Link
 } from "spectacle";
 
+// export const themeColors = {
+//   dark: "#1C1B21",
+//   text: "#BBBBBB",
+//   lightText: "#EAEAEA",
+//   darkText: "#3D4554",
+//   green: "#26D9D2",
+//   red: "#EF5350",
+//   aqua: "#24c4b7",
+//   yellow: "#fded07",
+//   purple: "#663399"
+// };
+
 export const themeColors = {
-  dark: "#1C1B21",
-  text: "#BBBBBB",
-  lightText: "#EAEAEA",
-  darkText: "#3D4554",
-  green: "#26D9D2",
-  red: "#EF5350",
-  aqua: "#24c4b7",
-  yellow: "#fded07",
-  purple: "#663399"
+  dark: "#ffffff",
+  text: "#000000",
+  lightText: "#000000",
+  darkText: "#000000",
+  green: "#111111",
+  red: "#111111",
+  aqua: "#111111",
+  yellow: "#111111",
+  purple: "#111111"
 };
 
 export const AquaText = ({children}) => (
