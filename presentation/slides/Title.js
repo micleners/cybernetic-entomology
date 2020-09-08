@@ -63,7 +63,7 @@ export const Title = () => (
       </Flex>
     </Flex>
     <Heading size={5} caps lineHeight={1} textColor="lightText">
-      March 2, 2020
+      September 9, 2020
     </Heading>
   </Slide>
 );

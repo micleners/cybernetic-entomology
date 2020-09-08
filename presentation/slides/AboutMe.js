@@ -71,8 +71,8 @@ export const AboutMe = () => (
           <span style={{ color: themeColors.aqua }}>science educator</span>
         </AboutList>
         <AboutList>
-          Consult with{' '}
-          <span style={{ color: themeColors.aqua }}>Source Allies</span>
+          Developer at{' '}
+          <span style={{ color: themeColors.aqua }}>Fuse (Cardinal Health)</span>
         </AboutList>
         <AboutList>
           👀👌 <span style={{ color: themeColors.aqua }}>UX for devs</span> and{' '}

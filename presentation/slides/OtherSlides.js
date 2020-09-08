@@ -1,5 +1,5 @@
-import React from "react";
-import createTheme from "spectacle/lib/themes/default";
+import React from 'react';
+import createTheme from 'spectacle/lib/themes/default';
 import {
   themeColors,
   H1Norm,
@@ -7,8 +7,8 @@ import {
   H2,
   FlexRowCenter,
   ListItemIndent,
-  AquaText
-} from "../helpers";
+  AquaText,
+} from '../helpers';
 import {
   BlockQuote,
   Cite,
@@ -20,18 +20,18 @@ import {
   Quote,
   Slide,
   Text,
-  Link
-} from "spectacle";
-import { Flex } from "rebass";
+  Link,
+} from 'spectacle';
+import { Flex } from 'rebass';
 
-const bugSweep = require("../../assets/sweep_bug.svg").default;
-const qr = require("../../assets/qr.png").default;
-const nike = require("../../assets/nike.png").default;
-const repeat = require("../../assets/repeat.svg").default;
-const testingLevels = require("../../assets/testing_levels.svg").default;
+const bugSweep = require('../../assets/sweep_bug.svg').default;
+const qr = require('../../assets/qr.png').default;
+const nike = require('../../assets/nike.png').default;
+const repeat = require('../../assets/repeat.svg').default;
+const testingLevels = require('../../assets/testing_levels.svg').default;
 
 export const RunTestsOftenAndEveryhere = ({ text }) => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Flex justifyContent="center" alignItems="center">
       <img src={bugSweep} width="200px" />
       <Flex flexDirection="column" alignItems="flex-start">
@@ -65,7 +65,7 @@ export const RunTestsOftenAndEveryhere = ({ text }) => (
 );
 
 export const TestsOutsideOfAutomation = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -82,7 +82,7 @@ export const TestsOutsideOfAutomation = () => (
 );
 
 export const InsideOrOutsideOfScope = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -111,7 +111,7 @@ export const InsideOrOutsideOfScope = () => (
 );
 
 export const QACommunication = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -142,14 +142,14 @@ export const QACommunication = () => (
 );
 
 export const GetUsersInFrontOfApplication = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Image src={bugSweep} width="300px" />
     <H2>Getting a user in front of your application and trying it out</H2>
   </Slide>
 );
 
 export const ConsiderationsOnUserTesting = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -171,7 +171,7 @@ export const ConsiderationsOnUserTesting = () => (
 );
 
 export const NonFunctionalRequirements = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -198,37 +198,26 @@ export const NonFunctionalRequirements = () => (
 );
 
 export const QRCode = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
-    <Heading size={4} textColor="lightText">
-      https://cybernetic-entomology.micleners.com/
-    </Heading>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScrc5-05gtAOZjP2Oxg3r4jQAViL7yaS_G3m6xnDB4BnVvTlw/viewform">
+  <Slide transition={['zoom']} bgColor="dark">
+    <a href="https://cybernetic-entomology.micleners.com/">
+      <Heading size={4} textColor="lightText">
+        https://cybernetic-entomology.micleners.com/
+      </Heading>
       <Image src={qr} height="600px" />
     </a>
   </Slide>
 );
 
 export const ImageSlide = ({ image, text, width }) => (
-  <Slide transition={["zoom"]} bgColor="dark">
-    {text ? <H2>Worked on my machine!</H2> : ""}
+  <Slide transition={['zoom']} bgColor="dark">
+    {text ? <H2>Worked on my machine!</H2> : ''}
     <Image src={image} width={width} />
-  </Slide>
-);
-
-export const TestPlanDictated = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
-    <Flex alignItems="center" justifyContent="space-around" mx="300px">
-      <img src={bugSweep} width="300px" />
-    </Flex>
-    <H2>Easy!</H2>
-    <H2>The test plan gets dictated from the top down</H2>
-    <H2>¯\_(ツ)_/¯</H2>
   </Slide>
 );
 
 // TODO: Update outline
 export const TestOutline = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <H1Norm>
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -245,8 +234,46 @@ export const TestOutline = () => (
   </Slide>
 );
 
+export const WhyTest = () => (
+  <Slide transition={['zoom']} bgColor="dark">
+    <H1Norm>
+      <Flex justifyContent="center" alignItems="center">
+        <img src={bugSweep} width="200px" />
+        Why Test your App?
+      </Flex>
+    </H1Norm>
+    <List style={{ marginLeft: 250 }} textColor="text">
+      <ListItem>If you don't, your user will</ListItem>
+      <ListItem>Living documentation</ListItem>
+      <ListItem>Regression</ListItem>
+    </List>
+  </Slide>
+);
+
+export const TestPlanDictated = () => (
+  <Slide transition={['zoom']} bgColor="dark">
+    <Flex alignItems="center" justifyContent="space-around" mx="300px">
+      <img src={bugSweep} width="300px" />
+    </Flex>
+    <H2>Easy!</H2>
+    <H2>The test plan gets dictated from the top down</H2>
+    <H2>¯\_(ツ)_/¯</H2>
+  </Slide>
+);
+
+export const TestPlanNoPlan = () => (
+  <Slide transition={['zoom']} bgColor="dark">
+    <Flex alignItems="center" justifyContent="space-around" mx="300px">
+      <img src={bugSweep} width="300px" />
+    </Flex>
+    <H2>Easy!</H2>
+    <H2>Just test what you feel like testing</H2>
+    <H2>¯\_(ツ)_/¯</H2>
+  </Slide>
+);
+
 export const TestPlanJustDoIt = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Flex alignItems="center" justifyContent="space-around" mx="300px">
       <img src={nike} width="300px" />
       <img src={bugSweep} width="300px" />
@@ -258,7 +285,7 @@ export const TestPlanJustDoIt = () => (
 );
 
 export const ConsiderationsOnTestPlans = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -286,7 +313,7 @@ export const ConsiderationsOnTestPlans = () => (
 );
 
 export const MoreOnTestPlans = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -312,7 +339,7 @@ export const MoreOnTestPlans = () => (
 );
 
 export const TestPlanJustDoItReprise = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Flex alignItems="center" justifyContent="space-around" mx="300px">
       <img src={repeat} width="300px" />
       <img src={bugSweep} width="300px" />
@@ -324,7 +351,7 @@ export const TestPlanJustDoItReprise = () => (
 );
 
 export const SeverityLevelRanking = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -363,7 +390,7 @@ export const SeverityLevelRanking = () => (
 );
 
 export const WhatTestsDoWeAutomate = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <H1Norm>
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -381,7 +408,7 @@ export const WhatTestsDoWeAutomate = () => (
 );
 
 export const FigmaSlide = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <H2>Testing levels</H2>
     <a href="https://www.figma.com/file/OxN58ihRfeVFoGwKNknNf3/Dev-Diagrams?node-id=0%3A1">
       <Image bgColor="lightText" src={testingLevels} height="600px" />
@@ -390,7 +417,7 @@ export const FigmaSlide = () => (
 );
 
 export const ThoughtsOnIntegrationTests = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <Heading size={4} textColor="lightText">
       <Flex justifyContent="center" alignItems="center">
         <img src={bugSweep} width="200px" />
@@ -408,13 +435,13 @@ export const ThoughtsOnIntegrationTests = () => (
         <AquaText>UI frameworks:</AquaText> Selenium, Cypress, Capybara
       </ListItem>
       <ListItem>
-        Blog:{" "}
+        Blog:{' '}
         <a href="https://www.toptal.com/java/unit-integration-junit-tests">
           <AquaText>Unit vs Integration Tests in Java</AquaText>
         </a>
       </ListItem>
       <ListItem>
-        Blog:{" "}
+        Blog:{' '}
         <a href="https://engineering.helpscout.com/testing-code-that-talks-to-the-database-7d15a5391fb9">
           <AquaText>Testing Code that Talks to the DB</AquaText>
         </a>
@@ -424,7 +451,7 @@ export const ThoughtsOnIntegrationTests = () => (
 );
 
 export const AutomatedEndToEndTests = () => (
-  <Slide transition={["zoom"]} bgColor="dark">
+  <Slide transition={['zoom']} bgColor="dark">
     <H1Col1>Automated E2E Testing</H1Col1>
     <br />
     <H2>The gift that keeps on giving 🎁</H2>
@@ -434,11 +461,54 @@ export const AutomatedEndToEndTests = () => (
       <ListItem>Tightens communication within team</ListItem>
       <ListItem>Serves as regression test suite</ListItem>
       <ListItem>
-        See{" "}
+        See{' '}
         <a href="https://github.com/micleners/cypress-retro/">
           <AquaText>Talk on Cypress for more info</AquaText>
         </a>
       </ListItem>
+    </List>
+  </Slide>
+);
+
+export const HowGranular = () => (
+  <Slide transition={['zoom']} bgColor="dark">
+    <H1Norm>
+      <Flex justifyContent="center" alignItems="center">
+        <img src={bugSweep} width="200px" />
+        How small is a unit?
+      </Flex>
+    </H1Norm>
+    <List style={{ marginLeft: 250 }} textColor="text">
+      <ListItem>Single unit of functionality?</ListItem>
+      <ListItem>Single unit of behavior?</ListItem>
+      <ListItem>We can define the first...</ListItem>
+      <ListItem>But testing the latter is better</ListItem>
+      <ListItem>How much should we isolate/mock?</ListItem>
+    </List>
+  </Slide>
+);
+
+export const BehaviorDrivenTesting = () => (
+  <Slide transition={['zoom']} bgColor="dark">
+    <Heading size={4} textColor="lightText">
+      <Flex justifyContent="center" alignItems="center">
+        <Flex justifyContent="center" alignItems="center">
+          <img src={bugSweep} width="200px" />
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="flex-start"
+          >
+            <div>Focus on BDD</div> <div>(Behavior Driven Development)</div>
+          </Flex>
+        </Flex>
+      </Flex>
+    </Heading>
+    <List style={{ marginLeft: 250 }} textColor="text">
+      <ListItem>Focus on how user interacts with app</ListItem>
+      <ListItem>Units are isolated behaviors, not methods</ListItem>
+      <ListItem>Avoid testing implementations</ListItem>
+      <ListItem>Test public APIs (exports, UI, etc)</ListItem>
     </List>
   </Slide>
 );
